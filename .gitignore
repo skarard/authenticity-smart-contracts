@@ -1,0 +1,22 @@
+# Common
+node_modules
+.env
+
+# VScode
+.vscode
+
+# Hardhat files
+cache
+artifacts
+
+# OpenZeppelin Upgradable
+.openzeppelin
+
+# Deployment
+deployment
+
+# Test Coverage
+coverage*
+
+# Typechain
+typechain-types
