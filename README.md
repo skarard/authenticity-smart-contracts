@@ -1,8 +1,10 @@
-# Authenticity Smart Contracts
+# WIP: Authenticity Smart Contracts
 
 Authenticity is an online blockchain-based photo validation tool designed to combat the rise of deep fakes. The free-to-use tool uses a unique hash code to verify the authenticity of images, making it easier to identify and combat fake news and other malicious activities.
 
 This repository contains the smart contracts associated with the Authenticity platform, built using the Hardhat framework.
+
+This is very early stages and parts maybe broken, check back regularly for updates.
 
 ## Getting Started
 
