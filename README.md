@@ -42,6 +42,10 @@ To deploy the contracts, run the following command:
 npx hardhat deploy
 ```
 
+## 100% coverage on unit tests
+Deploying, writing and reading data to and from a blockchain is a critical process that requires absolute accuracy. To ensure this accuracy, 100% coverage is essential as it guarantees that all code is tested before deployment. However, 100% coverage is not enough. Smart coverage, which entails writing unit tests to specifically target areas of the codebase with a higher risk of errors or bugs, is necessary to ensure that the code is bug-free when deployed. Smart coverage also helps to identify potential areas of improvement, as it allows for more focused testing. Additionally, it can help to reduce the amount of time spent writing and debugging unit tests, as it allows for more targeted tests. In conclusion, having 100% coverage is important, but having smart coverage is even more important as it ensures that all areas of the codebase are thoroughly tested and any potential errors or bugs are identified.
+
+
 ## License
 
 Authenticity is released under the MIT License. See [LICENSE](https://github.com/skarard/authenticity-smart-contracts/blob/master/LICENSE) for more details.
