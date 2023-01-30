@@ -1,4 +1,5 @@
 import { expect } from "chai";
+import { ethers } from "hardhat";
 export default function suite() {
   let ctx: Mocha.Context;
 
@@ -10,7 +11,7 @@ export default function suite() {
   beforeEach(async function () {});
 
   it("should deploy", async () => {
-    const deployed = false;
-    expect(deployed).to.be.true;
+    const authenticity = await ctx.authenticityFactory.deploy();
+    await expect(authenticity.deployed()).to.not.be.reverted;
   });
 }

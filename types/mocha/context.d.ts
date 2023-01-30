@@ -1,4 +1,6 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
+import { Authenticity } from "../../typechain-types/Authenticity";
+import { Authenticity__factory } from "../../typechain-types/factories/Authenticity__factory";
 
 declare module "mocha" {
   export interface Context {
@@ -8,5 +10,7 @@ declare module "mocha" {
     user1: SignerWithAddress;
     user2: SignerWithAddress;
     user3: SignerWithAddress;
+    authenticityFactory: Authenticity__factory;
+    authenticity: Authenticity;
   }
 }
