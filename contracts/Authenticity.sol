@@ -6,11 +6,19 @@ contract Authenticity {
 
     constructor() {}
 
-    function writeHash(bytes32 hash_) external {
-        _hashAddress[hash_] = msg.sender;
+    function writeHash(bytes32[] memory hash_) external {
+        for (uint256 i; i < hash_.length; i++) {
+            _hashAddress[hash_[i]] = msg.sender;
+        }
     }
 
-    function readHash(bytes32 hash_) external view returns (address) {
-        return _hashAddress[hash_];
+    function readHash(
+        bytes32[] calldata hash_
+    ) external view returns (address[] memory) {
+        address[] memory addresses = new address[](hash_.length);
+        for (uint256 i; i < hash_.length; i++) {
+            addresses[i] = _hashAddress[hash_[i]];
+        }
+        return addresses;
     }
 }
