@@ -9,7 +9,7 @@
     "coverage:clean": "rimraf coverage* && hardhat clean",
     "compile": "hardhat compile",
     "remixd": "remixd -s ./ -u https://remix.ethereum.org",
-    "start": "run test"
+    "deployLocal": "start npx hardhat node && timeout /t 3 /nobreak > NUL && hardhat run scripts/deployLocal.ts --network localhost"
   },
   "keywords": [],
   "author": "skarard <skarard@gmail.com> (https://skarard.xyz)",
