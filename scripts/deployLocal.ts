@@ -1,5 +1,6 @@
 import * as dotenv from "dotenv";
 import hre, { ethers } from "hardhat";
+import { Authenticity } from "../typechain-types/Authenticity";
 import { contractDeployment, keypress, LogDeployment } from "./utils";
 
 dotenv.config();
@@ -43,6 +44,20 @@ async function main() {
       date,
       network,
       deployer: deployer.address,
+    });
+  }
+
+  // Deploy Contract
+  {
+    const authenticityContract = (await contractDeployment(
+      deployer,
+      "Authenticity",
+      [],
+      true
+    )) as Authenticity;
+
+    deployment.write({
+      authenticityContract: authenticityContract.address,
     });
   }
 }
