@@ -57,7 +57,10 @@ const config: HardhatUserConfig = {
     // gasPrice: 60,
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: {
+      mainnet: process.env.ETHERSCAN_API_KEY ?? "",
+      polygonMumbai: process.env.POLYGONSCAN_API_KEY ?? "",
+    },
   },
   mocha: {
     timeout: 1200000,
