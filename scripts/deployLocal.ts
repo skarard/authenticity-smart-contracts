@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv";
+import { parseEther } from "ethers/lib/utils";
 import hre, { ethers } from "hardhat";
 import { Authenticity } from "../typechain-types/Authenticity";
 import { contractDeployment, keypress, LogDeployment } from "./utils";
@@ -16,6 +17,10 @@ const deployment = new LogDeployment(
   `deployment/${network}`,
   `deployment-${date}.json`
 );
+
+const testUser = {
+  address: "0x5fBDD44554b9A47A66165AeAF630482002B7E6c6",
+};
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -38,8 +43,6 @@ async function main() {
     );
     console.log("\n");
 
-    keypress();
-
     deployment.write({
       date,
       network,
@@ -58,6 +61,15 @@ async function main() {
 
     deployment.write({
       authenticityContract: authenticityContract.address,
+    });
+  }
+
+  // Transfer to accounts
+  {
+    console.log("Seed:" + testUser.address);
+    await deployer.sendTransaction({
+      to: testUser.address,
+      value: parseEther("10"),
     });
   }
 }
