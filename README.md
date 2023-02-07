@@ -6,6 +6,12 @@ This repository contains the smart contracts associated with the Authenticity pl
 
 This is very early stages and parts maybe broken, check back regularly for updates.
 
+## Project Links
+- **Live Demo** - https://authenticity-frontend.vercel.app/
+- Frontend Repo - https://github.com/skarard/authenticity-frontend
+- SmartContractGUI - https://www.smartcontractgui.xyz/Authenticity-V1-CJPiiWMed3
+- PolygonScan - https://mumbai.polygonscan.com/address/0xABFd0922f43C6591400F30ccFae055d5e2a54122
+
 ## Getting Started
 
 These instructions will get you a copy of the Authenticity smart contracts up and running on your local machine for development and testing purposes. 
